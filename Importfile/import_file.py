@@ -1,5 +1,7 @@
 from ast import literal_eval
 
+import os
+
 def load_inventory(name_file):
     try:
         with open(name_file, 'r') as file:
@@ -13,10 +15,11 @@ def save_inventory(name_file,inventory):
         file.write(str(inventory))
 
 def save_history(history):
-    with open(r'C:/Users/miria/OneDrive/Desktop/Importfile/log.txt', 'w') as fp:
-        #fp.write("\n".join(str(history)))    
-        fp.write((str(history)))
+    path = os.path.join(os.getcwd(), "log.txt")
+    with open(path, 'w') as fp:  
+        fp.write((str(f"Log: {history}")))
 
 def save_balance(balance_account):
-    with open(r'C:/Users/miria/OneDrive/Desktop/Importfile/balance.txt', 'w') as fp:
+    path = os.path.join(os.getcwd(), "balance.txt")
+    with open(path, 'w') as fp:
         fp.write(str(f"Total Balance: {balance_account}"))

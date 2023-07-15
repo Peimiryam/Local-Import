@@ -1,1 +1,1 @@
-{'pen': [2, 'Price:1.0'], 'cat': [1, 'Price:2.0']}
+{'pen': [2, 'Price:1.0'], 'cat': [1, 'Price:2.0'], 'book': [2, 'Price:1.0']}
